@@ -1,0 +1,36 @@
+@CHARSET "UTF-8";
+.header{
+	height:170px;
+}
+.TextBox{
+	margin-top:30px;
+}
+/*Login*/
+.error_is-visible_uname{
+    color:red;
+    opacity: 1;
+    margin-bottom: 0px;
+    visibility: visible;
+    position: absolute;
+    top: 9px;
+    right: 28px;
+    line-height: 17px;
+    font-weight: 500;
+    font-family: Arial;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.error_is-visible_pwd{
+	 color:red;
+    opacity: 1;
+    margin-bottom: 0px;
+    visibility: visible;
+    position: absolute;
+    top: 9px;
+    right: 28px;
+    line-height: 17px;
+    font-weight: 500;
+    font-family: Arial;
+    padding-right: 5px;
+    padding-left: 5px;
+}

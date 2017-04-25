@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>EasyBuy</display-name>
+  <filter>
+  	<filter-name>InitDataFilter</filter-name>
+  	<filter-class>com.zjj.filter.InitDataFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  		<filter-name>InitDataFilter</filter-name>
+  		<url-pattern>/Home.jsp</url-pattern>
+  </filter-mapping>
+   <filter-mapping>
+  		<filter-name>InitDataFilter</filter-name>
+  		<url-pattern>/GoodsInfo.jsp</url-pattern>
+  </filter-mapping>
+
+  <filter>
+  	<filter-name>LoginFilter</filter-name>
+  	<filter-class>com.zjj.filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  		<filter-name>LoginFilter</filter-name>
+  		<url-pattern>/ShopCar.jsp</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  		<filter-name>LoginFilter</filter-name>
+  		<url-pattern>/PersonCenter.jsp</url-pattern>
+  </filter-mapping>
+    <filter-mapping>
+  		<filter-name>LoginFilter</filter-name>
+  		<url-pattern>/OrderDetails.jsp</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  		<filter-name>LoginFilter</filter-name>
+  		<url-pattern>/CheckOrder.jsp</url-pattern>
+  </filter-mapping>
+   <filter>
+  	<filter-name>OrderFilter</filter-name>
+  	<filter-class>com.zjj.filter.OrderFilter</filter-class>
+  </filter>
+   <filter-mapping>
+  		<filter-name>OrderFilter</filter-name>
+  		<url-pattern>/CheckOrder.jsp</url-pattern>
+  </filter-mapping>
+    <filter>
+  	<filter-name>OrderDetailsFilter</filter-name>
+  	<filter-class>com.zjj.filter.OrderDetailsFilter</filter-class>
+  </filter>
+   <filter-mapping>
+  		<filter-name>OrderDetailsFilter</filter-name>
+  		<url-pattern>/OrderDetails.jsp</url-pattern>
+  </filter-mapping>
+ <filter>
+  	<filter-name>GoodsInfoFilter</filter-name>
+  	<filter-class>com.zjj.filter.GoodsInfoFilter</filter-class>
+  </filter>
+   <filter-mapping>
+  		<filter-name>GoodsInfoFilter</filter-name>
+  		<url-pattern>/GoodsInfo.jsp</url-pattern>
+  </filter-mapping>
+   <filter>
+  	<filter-name>ShopCarFilter</filter-name>
+  	<filter-class>com.zjj.filter.ShopCarFilter</filter-class>
+  </filter>
+   <filter-mapping>
+  		<filter-name>ShopCarFilter</filter-name>
+  		<url-pattern>/ShopCar.jsp</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginService</servlet-name>
+    <servlet-class>com.zjj.Servlet.LoginService</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegisterService</servlet-name>
+    <servlet-class>com.zjj.Servlet.RegisterService</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GoodsInfo</servlet-name>
+    <servlet-class>com.zjj.Servlet.GoodsInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginOut</servlet-name>
+    <servlet-class>com.zjj.Servlet.LoginOut</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShopCarList</servlet-name>
+    <servlet-class>com.zjj.Servlet.ShopCarList</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteGoods</servlet-name>
+    <servlet-class>com.zjj.Servlet.DeleteGoods</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddShopCar</servlet-name>
+    <servlet-class>com.zjj.Servlet.AddShopCar</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ConfirmOrder</servlet-name>
+    <servlet-class>com.zjj.Servlet.ConfirmOrder</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Addaddress</servlet-name>
+    <servlet-class>com.zjj.Servlet.Addaddress</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChooseAddress</servlet-name>
+    <servlet-class>com.zjj.Servlet.ChooseAddress</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddAddress</servlet-name>
+    <servlet-class>com.zjj.Servlet.AddAddress</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>LoginService</servlet-name>
+    <url-pattern>/LoginService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterService</servlet-name>
+    <url-pattern>/RegisterService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GoodsInfo</servlet-name>
+    <url-pattern>/GoodsInfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginOut</servlet-name>
+    <url-pattern>/LoginOut</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShopCarList</servlet-name>
+    <url-pattern>/ShopCarList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteGoods</servlet-name>
+    <url-pattern>/DeleteGoods</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddShopCar</servlet-name>
+    <url-pattern>/AddShopCar</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ConfirmOrder</servlet-name>
+    <url-pattern>/ConfirmOrder</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Addaddress</servlet-name>
+    <url-pattern>/Addaddress</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChooseAddress</servlet-name>
+    <url-pattern>/ChooseAddress</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddAddress</servlet-name>
+    <url-pattern>/AddAddress</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>Home.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

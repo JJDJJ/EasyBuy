@@ -1,0 +1,42 @@
+package com.zjj.util;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.util.Properties;
+
+public class ConnectionFactory {
+	private static String driver;
+	private static String url;
+	private static String username;
+	private static String password;
+
+	// 当使用这个类的时候会调用静态块，只会执行一次，用来对静态变量做初始化
+	static {
+		Properties props = new Properties();
+		InputStream is = ConnectionFactory.class.getResourceAsStream("jdbcinfo.properties");
+		// 以输入流的形式读取属性文件
+		try {
+			props.load(is);
+			driver = props.getProperty("oracle.driver");
+			url = props.getProperty("oracle.url");
+			username = props.getProperty("oracle.user");
+			password = props.getProperty("oracle.password");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static Connection getConnection() {
+		Connection conn = null;
+		try {
+			Class.forName(driver);
+			conn = DriverManager.getConnection(url, username, password);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return conn;
+	}
+
+}

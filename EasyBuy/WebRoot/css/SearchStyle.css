@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+@CHARSET "UTF-8";
+.header{
+	height:170px;
+}
+.TextBox{
+
+}
+a{
+
+	cursor:pointer;
+}
+.searchstyle {
+	text-decoration:none;
+    padding-left: 0px;
+    margin-top: 16px;
+}
+.searchstyle li{
+    border-right: solid 1px #408aa7;
+    display: inline;
+    padding-left: 3px;
+    margin-right: 14px;
+	
+}
+.searchstyle li a{
+	padding-right:20px;
+}
